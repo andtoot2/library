@@ -1,21 +1,17 @@
 body {
-    display: grid;
-    grid-template-rows: 150px 80px auto;
-    font-family:Arial, Helvetica, sans-serif;
-    background-color: rgb(37, 37, 37);
+    margin: 0;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    background-color: white;
 }
 
 .header {
-    background-color: rgb(73, 73, 73);
+    background-color: skyblue;
     color: white;
     font-size: 50px;
     font-weight: bolder;
     grid-row: 1 / 2;
     display: flex;
     padding-left: 20px;
-    border-bottom: 5px;
-    border-bottom-style: ridge;
-    border-color: darkgray;
 }
 
 img {
@@ -33,7 +29,6 @@ img {
 }
 
 .open-button {
-    color: white;
     background: none;
     font-size: 30px;
     font-weight: bold;
@@ -47,15 +42,15 @@ img {
 
 form {
     font-size: 25px;
-    background-color: rgb(73, 73, 73);
-    color: white;
+    background-color: white;
     display: grid;
     width: 500px;
     grid-template-rows:  auto auto auto auto auto auto;
     gap: 10px;
     border: 5px;
-    border-style: ridge;
-    border-color: darkgray;
+    border-style:solid;
+    border-radius: 10px;
+    border-color: rgb(221, 216, 216);
     justify-items: center;
     align-items: center;
 }
@@ -96,6 +91,15 @@ form {
     margin-bottom: 10px;
 }
 
+.submitbtn {
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 10px;
+    background-color: skyblue;
+}
+
 .library {
     display: flex;
     justify-content: center;
@@ -104,34 +108,39 @@ form {
 }
 
 .cards {
-    display: grid;
-    grid-template-columns: 300px 300px 300px 300px;
-    grid-template-rows: auto;
-    grid-auto-rows: 1fr;
-    grid-auto-columns: 300px;
-    gap: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 .card {
     font-size: 15px;
-    background-color: rgb(73, 73, 73);
-    color: white;
+    background-color: white;
     display: grid;
     max-width: 200px;
-    grid-template-rows: 60px 30px 30px 30px 50px;
+    grid-template-rows: 95px 30px 30px 30px 50px;
     gap: 5px;
     border-radius: 5px;
     justify-items: center;
     align-items: center;
+    box-shadow: 5px 5px 10px gray;
+    margin: 20px;
+
+}
+
+.card:hover {
+    transform: scale(1.2);
 }
 
 .tittle {
-    border: 5px;
-    border-color: darkgrey;
-    border-style: ridge;
     padding: 10px;
     border-radius: 5px;
-    background-color: gray;
+    background-color: skyblue;
+    margin: 10px;
+    margin-top: 5px;
 }
 
 .isread {
@@ -143,6 +152,8 @@ form {
     padding: 10px;
     padding-left: 40px;
     padding-right: 40px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .notread {
@@ -154,6 +165,8 @@ form {
     padding: 10px;
     padding-left: 20px;
     padding-right: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .rmv {
